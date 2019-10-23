@@ -21,5 +21,10 @@ describe('Binary Search', () => {
 	});
 
 	//(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)
-
+	it('returns false if the array is empty', () => {
+		expect(binarySearch([], 25)).to.equal(false);
+	})
+	it('appropriately handles array of strings', () => {
+		expect(binarySearch(['aardvark', 'cat', 'dog', 'elephant', 'mouse', 'zebra'], 'cat')).to.equal(true);
+	})
 });
